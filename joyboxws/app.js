@@ -10,7 +10,7 @@ app.post('/joyboxws/',  function(req, res){
 	console.log("JOYBOX WEB SERVICE");
 	
 	console.log("body: ",req.body);
-	console.log("request. body: ", req.body.action);
+	console.log("request action: ", req.body.result.action);
 	
 	
 });
