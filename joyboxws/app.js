@@ -57,9 +57,10 @@ function makeFbResponse(){
 		 }, function(error, response, body){
 			 if(!error&&response.statusCode === 200){		 
 				 console.log("\n LOADED DATA FROM ONLINE");
-				 //console.log("body:", body);
+				 
 				 jsonContent = JSON.parse(body);
-				  // total number of products -> using URL
+				  // total number of products -> using URL				  
+				console.log("body:", jsonContent);
 				numberOfProduct = jsonContent.extractorData.data[0].group.length
 				console.log("length: ", numberOfProduct);
 			 }
