@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 
 
-app.use(express.body-parser());
+app.use(express.bodyParser());
 app.use(bodyParser.json());
 app.listen(7000);
 
