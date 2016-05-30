@@ -46,7 +46,8 @@ function processEvent(event) {
                 let responseData = response.result.fulfillment.data;
                 let action = response.result.action;
 				
-				console.log("action: ", action);
+				console.log("response: ", response);
+				//console.log("")
 
                 if (isDefined(responseData) && isDefined(responseData.facebook)) {
                     try {
