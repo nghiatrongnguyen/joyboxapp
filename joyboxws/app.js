@@ -10,10 +10,7 @@ app.post('/joyboxws/',  function(req, res){
 	console.log("JOYBOX WEB SERVICE");
 	
 	console.log("body: ",req.body);
-	
-	var jsonPost = JSON.parse(req.body);
-	console.log("request. body: ", jsonPost.body);	
-	console.log("action: ", jsonPost.result.action);
+	console.log("request. body: ", req.body.action);
 	
 	
 });
