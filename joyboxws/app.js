@@ -40,18 +40,6 @@ function queryProduct(category, subcategory, type, lens, resolution){
 	
 }
 
-function makeFbResponse(){
-	
-	messageData = {
-    "attachment": {
-      "type": "template",
-      "payload": {
-        "template_type": "generic",
-        "elements": [],
-      }
-    }
-  };
-  
 	request({
 			url: url_slbt,
 		 }, function(error, response, body){
@@ -75,6 +63,18 @@ function makeFbResponse(){
 			 console.log("\n LOAD DATA COMPLETED");
 	 });
   
+
+function makeFbResponse(){
+	
+	messageData = {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [],
+      }
+    }
+  };
 	for (i=0; i< 5; i++ ){
 	  
 		//item = jsonContent.result.extractorData.data[0].group[i];	
