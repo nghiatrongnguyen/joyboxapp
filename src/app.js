@@ -14,6 +14,11 @@ const APIAI_LANG = process.env.APIAI_LANG || 'en';
 const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
 const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN;
 
+//setup for Joybox page
+//APIAI_ACCESS_TOKEN=324d2b5845214d5f91cc6c89b3550929 
+//FB_PAGE_ACCESS_TOKEN=EAAPsuaR9aooBAFHiRys6jXnUX91lt7evfByO7Hc42qcPZBgeA3dHq18C0LvEwjuaXodnliKZAOs0RZAfxgQ6v7Q9SFhvGZCzrHalj3myhjzrtmeKfSXZCvZBaZBla0zrhvZB17Njru2p1xWgkSKmVZB59yXBFaXt9gOr6kFmAZBHukPAZDZD 
+//FB_VERIFY_TOKEN=verify_me
+
 const apiAiService = apiai(APIAI_ACCESS_TOKEN, {language: APIAI_LANG, requestSource: "fb"});
 const sessionIds = new Map();
 
@@ -40,6 +45,8 @@ function processEvent(event) {
                 let responseText = response.result.fulfillment.speech;
                 let responseData = response.result.fulfillment.data;
                 let action = response.result.action;
+				
+				console.log("action: ", action);
 
                 if (isDefined(responseData) && isDefined(responseData.facebook)) {
                     try {
